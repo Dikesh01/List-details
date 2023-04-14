@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+    <style>
+        table,th, td{
+            border: 1px solid blue;
+            border-collapse: collapse;
+            align: center;
+        }
+    </style>
+    <style>
+        .colour{
+            color:rgb(5, 43, 168);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul style="list-style-type:none;">
+                <li><a href="https://lowes.co.in/">Home</a></li>
+                <li><a href="https://lowes.co.in/about/">About me</a></li>
+                <li><a href="https://lowes.co.in/contact/">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h3 align="center">About me</h3>
+    <p>
+        I am extremely proud of our people who are smart, driven, and always willing to challenge the
+        status quo. Together we have built a fantastic organization on a solid foundation of 
+        trust, respect, empathy, and agility. We are scaling new heights, creating the next in 
+        retail, and our people are helping us do this. status quo. Together we have built a fantastic
+        organization on a solid foundation of trust, respect, empathy, and agility. We are scaling new 
+        heights, creating the next in retail, and our people are helping us do this.
+    </p>
+    <h3 align="center">Contact me</h3>
+    <form method="POST">
+        <div>
+            <label for="name">Name :</label>
+            <input type="text" name="name" placeholder="full name" required>
+        </div>
+        
+        <div>
+            <label for="msg">Message :</label><br>
+            <textarea type="text"  cols="30" rows="4"  required></textarea>
+        </div><br>
+
+        <div>
+            <label for="number">Phone No :</label>
+            <input type="tel" name="number" pattern="^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$"   required>
+        </div><br>
+        
+        <div>
+            <label for="appointment">Date of Appointment :</label>
+            <input type="date" name="appointment" id="">
+        </div><br>
+
+        <div>
+            <label for="contact">Contact Via -</label><br>
+            Whats app<input type="radio" name="contact">
+            Call<input type="radio" name="contact">
+        </div><br>
+        <div>
+            <label for="time">Time slots available -</label><br>
+            09:00am - 12:00pm<input type="checkbox"><br>
+            01:00pm - 03:00pm<input type="checkbox"><br>
+            04:00pm - 06:00pm<input type="checkbox">
+        </div><br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">        
+    </form>
+    <h3 align="center">Projects</h3>
+    <table style="font-size: small;">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Discription</th>
+            <th>Links</th>
+        </tr>
+        <tr>
+            <td class="colour">A100</td>
+            <td>Robin</td>
+            <td>Interior_Design</td>
+            <td><a href="https://www.decorilla.com/online-decorating/10-best-tips-for-creating-beautiful-modern-interior-design/">Link1</a></td>
+        </tr>
+        <tr>
+            <td class="colour">A101</td>
+            <td>Neel</td>
+            <td>Automobile</td>
+            <td><a href="https://www.zigwheels.com/news-features/general-news/honda-cars-india-confirms-india-specific-suv-will-launch-in-2023/45360/">Link2</a></td>
+        </tr>
+
+        <tr>
+            <td class="colour">A102</td>
+            <td>Palak</td>
+            <td>Restaurant</td>
+            <td><a href="https://recipes.timesofindia.com/recipes/pizza/rs56933159.cms">Link3</a></td>
+        </tr>
+        
+    </table><br>
+    <footer>
+        <h3 align="center">You can also connect with me on :</h3><br>
+        
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+            <a href="https://www.instagram.com/" target="_blank">-Gmail</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.facebook.com/" target="_blank">-Github</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.snapchat.com/en-US" target="_blank">-Linkedin</a>
+        
+        
+    </footer>
+</body>
+</html>

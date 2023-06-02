@@ -1,0 +1,120 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+input, button{
+    font-size: 16px;
+}
+
+body{
+    background-color: black;
+}
+#container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; 
+    padding: 40px 20px;
+    /* grid-template-rows: */
+}
+
+@media (max-width: 605px){
+    #container{
+        display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    }  
+}
+@media (max-width: 350px){
+    #container{
+        display: grid;
+    grid-template-columns: 1fr;
+    }  
+}
+#container > div{
+    height: 250px;
+    display: flex;
+    flex-flow: column;
+    border-radius: 5px;
+    position: relative;
+    /* border: 2px solid red; */
+
+}
+#container > div > img{
+    width: 300px;
+    height: 70%;
+    transition: 0.4s;
+    cursor: pointer;
+}
+#container > div > img:hover{
+    transform: scale(1.07);
+    /* transform: scaleX(1.08); */
+}
+
+#container > div > b{
+    position: absolute;
+    /* top: calc(70%-50px); */
+    top: 135px;
+    right: 3px;
+    background-color: black;
+    padding: 1px;
+    border-radius: 2px;
+    font-weight: 600;
+    color: white;
+    font-size: 14px;
+    padding: 2px 4px;
+}
+
+.title{
+    color: white;
+    /* font-size: 8px; */
+    font-weight: 900;
+
+} 
+
+.channel-name, .view-count{
+    color: gray;
+    font-weight: 500;
+}
+
+.search-container{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px auto;
+    height: 40px;
+    /* border: 2px solid red; */
+}
+
+.search-container > input{
+    flex-grow: 1;
+    border: 2px solid gray;
+    padding: 0 20px;
+    border-radius: 19px;
+    background-color: transparent;
+    color:white
+    
+}
+
+.search-container > input:focus{
+    border: 2px solid white;
+    
+}
+
+.search-container > button{
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    outline: 2px solid gray;
+    height: 38px;
+    border-radius: 19px;
+    padding: 0 40px;
+}
+.search-container > button:hover{
+    background-color: gray;
+}
+
+
+
+

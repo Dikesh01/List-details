@@ -1,0 +1,96 @@
+body{
+    background-color: black;
+}
+*{
+    margin: 0;
+}
+.video-details{
+    /* border: 2px solid red; */
+    display: flex;
+    /* padding: 10px 20px; */
+    justify-content: space-between;
+    align-items: center;
+    width: 800px;
+}
+.stats{
+    /* border: 2px solid blue; */
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.like-container{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    cursor: pointer;
+}
+.like{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+.comment-container{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.owner-details{
+    display: flex;
+    flex-direction: column;
+    color: gray;
+}
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.profile > img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+#title{
+    margin: 10px;
+}
+
+.comment{
+    /* border: 2px solid red; */
+    display: flex;
+    /* align-items: center; */
+    gap: 20px;
+    color: white;
+    padding: 20px;
+}
+.comment > img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.comment-right-half{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.comment span{
+    font-size: 14px !important;
+    color: gray;
+}
+.comment p{
+    color: gray;
+}
+
+.reply{
+    background-color: transparent;
+    border: none;
+    color: rgb(81, 194, 214);
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 14px;
+    
+
+
+}
+.reply:hover, span:hover{
+    border: 1px solid gray;
+}

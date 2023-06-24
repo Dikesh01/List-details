@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    background: #000000;
+    color:#FFFFFF;
+}
+
+.upper_navbar{
+    height: 50px;
+    width: auto;
+    border-bottom: 1px solid #FFFFFF;
+    padding: 0 10px 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right_div{
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid white; */
+}
+
+.heading_container{
+    margin-top: 30px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    gap: 25px;
+}
+#logoutBtn{
+    width: 100px;
+    height: 30px;
+}

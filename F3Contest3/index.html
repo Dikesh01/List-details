@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User_SignUp_Form</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="upper_navbar">
+        <div class="left_div">Header</div>
+        <div class="right_div">
+            <div id="signup">Signup</div>
+            <div id="profile">Profile</div>
+        </div>
+    </nav>
+    <section class="signup_section">
+        <form>
+            <h1>Signup</h1>
+            <div class="user_details">
+
+                <div class="common">
+                    <label for="name">Full Name</label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div class="common">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="common">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                </div>
+                <div class="common">
+                    <label for="confiPassword">Confirm Password</label>
+                    <input type="password" name="confiPassword" id="confiPassword">
+                </div>
+            </div>
+            <p id="error"></p>
+            <p id="success"></p>
+            <button id="signupBtn" type="submit">Signup</button>
+        </form>
+    </section>
+
+    <!-- _____________________________________________________________________________ -->
+    <script src="./script.js"></script>
+</body>
+</html>

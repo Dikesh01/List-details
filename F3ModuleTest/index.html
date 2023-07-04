@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My_Public_IPAddress</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script>
+        $.getJSON("https://api.ipify.org?format=json",function(data){
+            // Give data value to p(html) element for #ipAddress
+            $("#ipAddress").html(data.ip);
+            // localStorage.setItem('IpData',JSON.stringify(data));
+        })
+
+      </script>
+</head>
+<body>
+
+
+        <section class="first_view">
+            <div class="heading_Ip">
+                <h1 id="heading">MY Public IP ADDRESS :</h1>
+                <p id="ipAddress"></p>
+            </div>
+            <br/>
+            <button id="getDataBtn">Get Data</button>
+        </section>
+
+        <section class="second_view">
+            <div class="details_container">
+                <div class="left">
+                    <span class="boltSpan">Lat : </span><span id="lat"></span><br>
+                    <span class="boltSpan">Long : </span><span id="long"></span>
+                </div>
+                <div class="middle">
+                    <span class="boltSpan">City : </span><span id="city"></span><br>
+                    <span class="boltSpan">Region : </span><span id="region"></span>
+                </div>
+                <div class="right">
+                    <span class="boltSpan">Organisation : </span><span id="organisation"></span><br>
+                    <span class="boltSpan">Hostname : </span><span id="hostname"></span>
+                </div>
+                
+            </div>
+            <br>
+            
+            <div id="map_container"></div>
+            <!-- <iframe src="https://maps.google.com/maps?q=21.23333, 81.63333&output=embed" 
+                    width="1300" 
+                    height="600" 
+                    frameborder="0" 
+                    style="border:0"
+            ></iframe> -->
+            <br>
+
+            <div class="restDetails">
+
+                <div>Time Zone: <span id="timeZone"></span></div>
+                <div>Date And Time: <span id="D&T"></span></div>
+                <div>Pincode: <span id="pincode"></span></div>
+                <div id="H3">Message: <span id="message"></span></div>
+            </div>
+
+            <div class="search_Bar">
+                <span class="material-icons">search</span>
+                <input type="text" id="search" placeholder="Filter">
+            </div>
+
+            <div class="grid_container">
+                <!-- <div class="pinDetails">
+                    <div>Name</div>
+                    <div>Branch Type</div>
+                    <div>Delivery Status</div>
+                    <div>District</div>
+                    <div>Division</div>
+                </div> -->
+            </div>
+        </section> 
+
+        
+
+    <script src="./script.js"></script>
+</body>
+</html>

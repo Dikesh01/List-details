@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Front page styling */
+.first_view{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.heading_Ip{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#heading{
+    font-weight: 900;
+}
+
+#ipAddress{
+    color: green;
+}
+
+#getDataBtn{
+    padding: 8px 60px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #000000;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    cursor: pointer;
+    /* display: none; */
+}
+
+
+
+
+/* second page styling */
+
+.second_view{
+    margin: 0 20px;
+    display: none;
+}
+
+.details_container{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.boltSpan{
+    font-size: 18px;
+    font-weight: bold;
+}
+.restDetails{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.restDetails > div{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.restDetails :nth-child(4){
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.restDetails p{
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.search_Bar{
+    border: 2px solid #000000;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 40px 0;
+    border-radius: 5px;
+}
+
+.search_Bar > input{
+    width: 100%;
+    font-size: 16px;
+    border: none;
+    color: rgb(126, 86, 86);
+}
+
+.search_Bar > input:focus{
+    outline: none;
+}
+
+.grid_container{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px;
+    
+}
+.pinDetails{
+    border: 2px solid #000000;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+}

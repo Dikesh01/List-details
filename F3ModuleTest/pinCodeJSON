@@ -1,0 +1,22 @@
+[
+    {
+        "Message": "Number of pincode(s) found:1",
+        "Status": "Success",
+        "PostOffice": [
+            {
+                "Name": "Urla",
+                "Description": null,
+                "BranchType": "Sub Post Office",
+                "DeliveryStatus": "Delivery",
+                "Circle": "Chattisgarh",
+                "District": "Raipur",
+                "Division": "Raipur",
+                "Region": "Raipur",
+                "Block": "NA",
+                "State": "Chattisgarh",
+                "Country": "India",
+                "Pincode": "492003"
+            }
+        ]
+    }
+]

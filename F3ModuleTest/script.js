@@ -1,18 +1,24 @@
+let ipAdd;
+$.getJSON("https://api.ipify.org?format=json",function(data){
+    // Give data value to p(html) element for #ipAddress
+    $("#ipAddress").html(data.ip);
+     ipAdd = data.ip;
+})
+
 
 const getDataButton = document.getElementById("getDataBtn");
 const secondView = document.getElementsByClassName('second_view')[0];
 const mapContainer = document.getElementById('map_container');
 
-
+console.log("this was mistake: ",ipAdd);
 getDataButton.addEventListener('click', function(){
     getDataButton.style.display='none';
     secondView.style.display='block';
 
-    // getting ip from the localstorage
-    const IP = JSON.parse(localStorage.getItem('IpData')).ip;
+    // getting ip from the ipAdd
     const token = '22e085fee39e4d';
 
-    return fetch(`https://ipinfo.io/${IP}/?token=${token}`)
+    return fetch(`https://ipinfo.io/${ipAdd}/?token=${token}`)
     .then((res)=>res.json())
     .then((data)=>{
         console.log(data);

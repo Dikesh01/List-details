@@ -1,3 +1,4 @@
+
 let ipAdd;
 $.getJSON("https://api.ipify.org?format=json",function(data){
     // Give data value to p(html) element for #ipAddress
@@ -5,19 +6,18 @@ $.getJSON("https://api.ipify.org?format=json",function(data){
      ipAdd = data.ip;
 })
 
-
 const getDataButton = document.getElementById("getDataBtn");
 const secondView = document.getElementsByClassName('second_view')[0];
 const mapContainer = document.getElementById('map_container');
+const filterSearch = document.getElementById('search');
 
-console.log("this was mistake: ",ipAdd);
+
 getDataButton.addEventListener('click', function(){
     getDataButton.style.display='none';
     secondView.style.display='block';
 
     // getting ip from the ipAdd
     const token = '22e085fee39e4d';
-
     return fetch(`https://ipinfo.io/${ipAdd}/?token=${token}`)
     .then((res)=>res.json())
     .then((data)=>{
@@ -37,7 +37,7 @@ getDataButton.addEventListener('click', function(){
         document.getElementById('city').innerText= data.city;
         document.getElementById('region').innerText= data.region;
         document.getElementById('organisation').innerText= data.org;
-        document.getElementById('hostname').innerText= data.org;
+        document.getElementById('hostname').innerText= location.hostname;
         document.getElementById('timeZone').innerText= data.timezone;
         document.getElementById('D&T').innerText= `${Cdate}, ${Ctime}`;
         document.getElementById('pincode').innerText= data.postal;
@@ -54,6 +54,7 @@ getDataButton.addEventListener('click', function(){
 // Addrressign Grign contaier
 const gridContainer = document.getElementsByClassName('grid_container')[0];
 
+let postOffice;
 function getPostOffice(pincode){
     return fetch(`https://api.postalpincode.in/pincode/${pincode}`)
     .then((res)=>res.json())
@@ -61,26 +62,25 @@ function getPostOffice(pincode){
         console.log(data);
         document.getElementById('message').innerText= `${data[0].Message}`;
         // Mapping through all post Office
-        let value = data[0].PostOffice;
-        // console.log(value);
-        value.forEach((elem) =>{
+        postOffice = data[0].PostOffice;
+
+        postOffice.forEach((elem) =>{
             let pinDetail = document.createElement('div');
             pinDetail.className = 'pinDetails';
             pinDetail.innerHTML = `
-                    <div>Name : ${elem.Name}</div>
-                    <div>Branch Type : ${elem.BranchType}</div>
-                    <div>Delivery Status : ${elem.DeliveryStatus}</div>
-                    <div>District : ${elem.District}</div>
-                    <div>Division : ${elem.Division}</div>
+                    <div><span class="boltSpan">Name : </span> ${elem.Name}</div>
+                    <div><span class="boltSpan">Branch Type : </span> ${elem.BranchType}</div>
+                    <div><span class="boltSpan">Delivery Status : </span> ${elem.DeliveryStatus}</div>
+                    <div><span class="boltSpan">District : </span> ${elem.District}</div>
+                    <div><span class="boltSpan">Division : </span> ${elem.Division}</div>
                     
-
             `
             gridContainer.append(pinDetail);
         })
 
     })
     .catch(err=>{
-        console.log('Unable to fetch due to : ', err)
+        console.log('Unable to fetch due to : ', err);
     })
 }
 
